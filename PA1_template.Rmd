@@ -7,7 +7,17 @@ output:
 
 
 ## Loading and preprocessing the data
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
+
+if(!file.exists('activity.csv')){
+unzip('activity.zip')  
+
+}
+activityData <- read.csv('activity.csv')
+
+```
 
 
 ## What is mean total number of steps taken per day?
